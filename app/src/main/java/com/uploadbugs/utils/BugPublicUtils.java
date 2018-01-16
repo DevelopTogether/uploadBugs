@@ -39,8 +39,8 @@ public class BugPublicUtils {
     public static String softwaremark;//软件标识
     public static List<BugBean> arrays;//本地保存的bug信息
 
-    public static void checkToUploadBugInfos(Context context,String savedPath, String uploadUrl, String regCode, String softMark) {
-        String path = Environment.getExternalStorageDirectory()+savedPath;
+    public static void checkToUploadBugInfos(Context context,String savedDirName, String uploadUrl, String regCode, String softMark) {
+        String path = Environment.getExternalStorageDirectory()+"/"+savedDirName;
         BugPublicUtils bugUtil = new BugPublicUtils(context).setBugSavedPath(path);
         if (BugPublicUtils.checkBugs(path)) {
             bugUtil.setUrl(uploadUrl).setRegCode(regCode).setSoftwareMark(softMark).searchFileDataToUpload();

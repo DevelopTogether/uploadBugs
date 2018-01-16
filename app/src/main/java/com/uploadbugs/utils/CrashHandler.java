@@ -182,7 +182,7 @@ public class CrashHandler implements UncaughtExceptionHandler {
 				if (!dir.exists()) {
 					dir.mkdirs();
 				}
-				FileOutputStream fos = new FileOutputStream(BugPublicUtils.bugSavedPath + fileName);
+				FileOutputStream fos = new FileOutputStream(BugPublicUtils.bugSavedPath +"/"+ fileName);
 				fos.write(sb.toString().getBytes());
 				fos.close();
 			}

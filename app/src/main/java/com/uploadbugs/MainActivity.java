@@ -12,7 +12,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        BugPublicUtils.checkToUploadBugInfos(this,"/SCPS_crash","http://zc.xun365.net/WebService/SoftWare.asmx/SetBugInfo","201801121045","SCPS");
+
+        BugPublicUtils.checkToUploadBugInfos(this,"SCPS_crash","http://zc.xun365.net/WebService/SoftWare.asmx/SetBugInfo","201801160920","SCPS");
+
+//        String a = "12";
+//        a.substring(0,10);
     }
 
 }
